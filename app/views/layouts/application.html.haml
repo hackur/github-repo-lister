@@ -1,0 +1,27 @@
+!!!
+%html
+  %head
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+      %title= content_for?(:title) ? yield(:title) : "GitHub Repo Listener"
+      %meta{:content => content_for?(:description) ? yield(:description) : "GitHub Repo Listener", :name => "description"}
+        = stylesheet_link_tag "application", :media => "all"
+        = javascript_include_tag "application"
+        = javascript_include_tag "jquery.fittext.js"
+        = csrf_meta_tags
+        = yield(:head)
+      %script $("#responsive-headline").fitText();
+  %body{:class => "preview #{controller_name} #{action_name}", :data => { :spy => "scroll", :target => ".subnav", :offset => "80"}}
+    %div.navbar.navbar-fixed-top.navbar-inverse
+      %div.navbar-inner
+        .container
+          = render 'layouts/navigation'
+    #main{:role => "main"}
+      .container
+        .content
+          .row
+            .span12
+              = render 'layouts/messages'
+              = yield
+          %footer
+      / ! end of .container
+    / ! end of #main

@@ -1,0 +1,24 @@
+<h1>Here are those GitHub Repositories you ordered...</h1>
+
+<% if @repositories %>
+
+	<% @repositories.each do |repo| %>
+	    <div class="media github-repo">
+	      <a class="pull-left" href="https://github.com/<%= repo["owner"]["login"] %>" target="_blank">
+	        <img class="media-object" alt="<%= repo["owner"]["name"] %>" style="width: 64px; height: 64px;" src="<%= repo["owner"]["avatar_url"] %>">
+	      </a>
+	      <div class="media-body">
+	        <h4 class="media-heading"><%= link_to repo["owner"]["login"], "https://github.com/" + repo["owner"]["login"], :style => "font-weight:normal;", :target => "_blank" %> / <%= link_to repo["name"], repo["html_url"], :target => "_blank" %></h4>
+	        <%= repo["description"] %>
+	      </div>
+	    </div>
+	    <hr/>
+	<% end %>
+
+<% else %>
+	
+	<div class="well">
+		<p>There are no repositories to display.</p>
+	</div>
+
+<% end %>

@@ -1,0 +1,1 @@
+ENV["REDISTOGO_URL"] = 'redis://redistogo:aabe58dda15c13d20b4d0d34e329add3@dory.redistogo.com:9849/'

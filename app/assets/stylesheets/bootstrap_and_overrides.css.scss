@@ -1,0 +1,174 @@
+
+
+/* Bootstrap Variables */
+
+$btnPrimaryBackground: #cbcbcb;
+$navbarBackground: #f5f5f5;
+
+
+/* Include Bootstrap */
+
+@import "bootstrap";
+body { padding-top: 60px; }
+@import "bootstrap-responsive";
+
+
+/*****  CloakOS Related Styles  *****/
+
+/* Navbar Fixes */
+
+.navbar .nav > li > a {
+	margin-top:0;
+}
+.navbar .brand {
+	font-size:2em;
+}
+.navbar .brand .badge {
+	position:relative;bottom:10px;
+}
+
+.well .well {
+  background-color:#262729;
+  color:white;
+  position:relative;top:20px;
+}
+
+.media.github-repo {
+  border-bottom:2px solid #eee;
+  padding-bottom:10px;
+}
+
+.github-repo-title {
+  border-bottom:2px solid #eee;
+  padding-bottom:5px;
+}
+
+input.github-user {
+  padding: 11px 19px;
+  font-size: 17.5px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+button.github-pull {
+  margin-left:0px;
+  width: 125px;
+}
+
+@media (max-width: 979px) and (min-width: 768px) {
+  button.github-pull {
+    width: 89px;
+  }
+}
+
+@media (max-width: 767px) {
+  [class*="span"], .uneditable-input[class*="span"], .row-fluid [class*="span"] {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  button.github-pull {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    font-size:1.25em;
+    padding:5px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position:relative;top:5px;
+  }
+
+  .well {
+    // padding:10px 10px 40px 10px;
+    padding-top:0;
+    padding-bottom:40px;
+  }
+
+  .well .well {
+    background-color:#262729;
+    color:white;
+    padding-bottom:40px;
+    margin-top:10px;
+    position:relative;top:40px;
+  }
+}
+
+/* Include Fonts */
+
+.monofett { font-family: 'Monofett' !important; }
+.boogaloo-regular { font-family: 'boogaloo-regular' !important; }
+.comfortaa-bold { font-family: 'comfortaa-bold' !important; }
+.comfortaa-light { font-family: 'comfortaa-light' !important; }
+.comfortaa-regular { font-family: 'comfortaa-regular' !important; }
+.fugazone-regular { font-family: 'fugazone-regular' !important; }
+
+@font-face {
+  font-family: 'boogaloo-regular';
+  src: url(font-path('boogaloo-regular-webfont.eot') + "?#iefix") format('embedded-opentype'),
+       url(font-path('boogaloo-regular-webfont.woff')) format('woff'),
+       url(font-path('boogaloo-regular-webfont.ttf'))  format('truetype'),
+	   url(font-path('boogaloo-regular-webfont.svg') + "#boogaloo-regular") format('svg');
+}
+
+@font-face {
+  font-family: 'comfortaa-bold';
+  src: url(font-path('comfortaa-bold-webfont.eot') + "?#iefix") format('embedded-opentype'),
+       url(font-path('comfortaa-bold-webfont.woff')) format('woff'),
+       url(font-path('comfortaa-bold-webfont.ttf'))  format('truetype'),
+	   url(font-path('comfortaa-bold-webfont.svg') + "#comfortaa-bold") format('svg');
+}
+
+@font-face {
+  font-family: 'comfortaa-light';
+  src: url(font-path('comfortaa-light-webfont.eot') + "?#iefix") format('embedded-opentype'),
+       url(font-path('comfortaa-light-webfont.woff')) format('woff'),
+       url(font-path('comfortaa-light-webfont.ttf'))  format('truetype'),
+	   url(font-path('comfortaa-light-webfont.svg') + "#comfortaa-light") format('svg');
+}
+
+@font-face {
+  font-family: 'comfortaa-regular';
+  src: url(font-path('comfortaa-regular.eot') + "?#iefix") format('embedded-opentype'),
+       url(font-path('comfortaa-regular.woff')) format('woff'),
+       url(font-path('comfortaa-regular.ttf'))  format('truetype'),
+	   url(font-path('comfortaa-regular.svg') + "#comfortaa-regular") format('svg');
+}
+
+@font-face {
+  font-family: 'flamenco-light';
+  src: url(font-path('flamenco-light-webfont.eot') + "?#iefix") format('embedded-opentype'),
+       url(font-path('flamenco-light-webfont.woff')) format('woff'),
+       url(font-path('flamenco-light-webfont.ttf'))  format('truetype'),
+	   url(font-path('flamenco-light-webfont.svg') + "#flamenco-light") format('svg');
+}
+
+@font-face {
+  font-family: 'flamenco-regular';
+  src: url(font-path('flamenco-regular-webfont.eot') + "?#iefix") format('embedded-opentype'),
+       url(font-path('flamenco-regular-webfont.woff')) format('woff'),
+       url(font-path('flamenco-regular-webfont.ttf'))  format('truetype'),
+	   url(font-path('flamenco-regular-webfont.svg') + "#flamenco-regular") format('svg');
+}
+
+@font-face {
+  font-family: 'fugazone-regular';
+  src: url(font-path('fugazone-regular-webfont.eot') + "?#iefix") format('embedded-opentype'),
+       url(font-path('fugazone-regular-webfont.woff')) format('woff'),
+       url(font-path('fugazone-regular-webfont.ttf'))  format('truetype'),
+	   url(font-path('fugazone-regular-webfont.svg') + "#fugazone-regular") format('svg');
+}
+
+@font-face {
+  font-family: 'monofett';
+  src: url(font-path('monofett-webfont.eot') + "?#iefix") format('embedded-opentype'),
+       url(font-path('monofett-webfont.woff')) format('woff'),
+       url(font-path('monofett-webfont.ttf'))  format('truetype'),
+	   url(font-path('monofett-webfont.svg') + "#monofett") format('svg');
+}

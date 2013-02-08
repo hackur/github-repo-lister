@@ -1,0 +1,46 @@
+
+<div class="span5 pull-left well">
+	<h3 class="boogaloo-regular">Pull GitHub Repos</h3>
+	<form class="form-search" method="post" action="/">
+		<input type="text" name="github_user" class="span3 input-medium search-query pull-left github-user" placeholder="Enter GitHub Username...">
+		<button type="submit" class="btn span2 btn-large btn-success pull-right github-pull">Pull</button>
+	
+		<div class="well clearfix">
+			<p>You may enter an email below to have the results emailed to you &mdash; All thanks to SendGrid's awesome, awesome, awesome service.</p>
+			<input type="text" name="sendgrid_email" class="span4 input-medium search-query" placeholder="Enter Your Email to Receive Results...">
+			<div class="pull-left" style="padding-top:10px;">
+				<input type="checkbox" id="subscribe" name="subscribe" style="margin-top:5px;" /> <label for="subscribe" style="position:inline;margin-top:5px;font-weight:bolder;">Notify me of new repos for this user.</label>
+			</div>
+				<img alt="SendGrid" id="sendgrid-logo" src="http://sendgrid.com/mkt/assets/sendgrid_logo-7e28caacb38d0ab11d74c12ff74f99f4.png" class="pull-right" style="float:left;width:125px;height:auto;margin-left:20px;margin-top:10px;">
+		</div>
+	</form>
+
+</div>
+
+
+<div class="span6 pull-right">
+<h4 class="comfortaa-bold github-repo-title">Repository List</h4>
+
+<% if @repositories %>
+
+	<% @repositories.each do |repo| %>
+	    <div class="media github-repo">
+	      <a class="pull-left" href="https://github.com/<%= repo["owner"]["login"] %>" target="_blank">
+	        <img class="media-object" alt="<%= repo["owner"]["name"] %>" style="width: 64px; height: 64px;" src="<%= repo["owner"]["avatar_url"] %>">
+	      </a>
+	      <div class="media-body">
+	        <h4 class="media-heading"><%= link_to repo["owner"]["login"], "https://github.com/" + repo["owner"]["login"], :style => "font-weight:normal;", :target => "_blank" %> / <%= link_to repo["name"], repo["html_url"], :target => "_blank" %></h4>
+	        <%= repo["description"] %>
+	      </div>
+	    </div>
+	<% end %>
+
+<% else %>
+	
+	<div class="well">
+		<p>There are no repositories to display.</p>
+	</div>
+
+<% end %>
+
+</div>
